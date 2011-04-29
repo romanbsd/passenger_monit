@@ -22,7 +22,8 @@ Gem::Specification.new do |s|
     "VERSION",
     "init.rb",
     "lib/passenger_monit.rb",
-    "lib/passenger_monit/pidfile_manager.rb"
+    "lib/passenger_monit/pidfile_manager.rb",
+    "passenger_monit.gemspec"
   ]
   s.homepage = %q{http://github.com/romanbsd/passenger_monit}
   s.require_paths = ["lib"]

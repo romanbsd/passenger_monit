@@ -23,5 +23,6 @@ begin
     gem.homepage = "http://github.com/romanbsd/passenger_monit"
     gem.authors = ["Roman Shterenzon"]
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
 end

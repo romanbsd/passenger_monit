@@ -1,0 +1,1 @@
+require 'passenger_monit'

@@ -13,11 +13,11 @@ Gem::Specification.new do |s|
   s.description = %q{Support for monitoring Passenger with Monit}
   s.email = %q{romanbsd@yahoo.com}
   s.extra_rdoc_files = [
-    "README"
+    "README.md"
   ]
   s.files = [
     "MIT-LICENSE",
-    "README",
+    "README.md",
     "Rakefile",
     "VERSION",
     "init.rb",

@@ -10,6 +10,12 @@ the instance number.
 [1]: http://www.modrails.com/ "Phusion Passenger"
 [2]: http://mmonit.com/monit/ "Monit"
 
+Installation
+============
+
+Add this line to your Gemfile:
+
+    gem 'passenger_monit', :group => :production
 
 Example Monit configuration
 ===========================

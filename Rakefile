@@ -1,5 +1,6 @@
 require 'rake'
 require 'rake/rdoctask'
+require 'rake/testtask'
 
 desc 'Default: create gemspec'
 task :default => :gemspec
@@ -11,6 +12,14 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
+desc 'Run unit tests.'
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'lib'
+  t.libs << 'test'
+  t.pattern = 'test/**/*_test.rb'
+  t.verbose = true
 end
 
 begin

@@ -1,8 +1,6 @@
 module PassengerMonit::PidfileManager
   extend self
   
-  BASENAME = '/var/tmp/rack.*.pid'
-  
   def write_pid_file
     pid = Process.pid
     count = 1
@@ -25,7 +23,7 @@ module PassengerMonit::PidfileManager
         break
       end
     end
-    pidfile ||= BASENAME.sub('*', count.to_s)
+    pidfile ||= basename.sub('*', count.to_s)
     File.open(pidfile, 'w') {|f| f.write(pid.to_s)}
   end
   
@@ -39,9 +37,13 @@ module PassengerMonit::PidfileManager
     end
   end
   
+  def basename
+    "#{PassengerMonit.pid_dir}/#{PassengerMonit.pid_file}"
+  end
+  
   private
   def go_over_pid_files
-    Dir[BASENAME].each do |file|
+    Dir[basename].each do |file|
       saved_pid = File.read(file).to_i
       yield file, saved_pid
     end

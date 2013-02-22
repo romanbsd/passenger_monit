@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{passenger_monit}
-  s.version = "0.1.0"
+  s.name = "passenger_monit"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Roman Shterenzon"]
-  s.date = %q{2011-08-03}
-  s.description = %q{Support for monitoring Passenger with Monit}
-  s.email = %q{romanbsd@yahoo.com}
+  s.date = "2013-02-22"
+  s.description = "Support for monitoring Passenger with Monit"
+  s.email = "romanbsd@yahoo.com"
   s.extra_rdoc_files = [
     "README.md"
   ]
@@ -23,12 +23,14 @@ Gem::Specification.new do |s|
     "init.rb",
     "lib/passenger_monit.rb",
     "lib/passenger_monit/pidfile_manager.rb",
-    "passenger_monit.gemspec"
+    "passenger_monit.gemspec",
+    "test/passenger_monit_test.rb",
+    "test/test_helper.rb"
   ]
-  s.homepage = %q{http://github.com/romanbsd/passenger_monit}
+  s.homepage = "http://github.com/romanbsd/passenger_monit"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{Support for monitoring Passenger with Monit}
+  s.rubygems_version = "1.8.23"
+  s.summary = "Support for monitoring Passenger with Monit"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
